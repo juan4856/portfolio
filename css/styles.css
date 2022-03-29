@@ -26,60 +26,36 @@ li{
     color: white;
     
 }
-/* Menu menuPrincipal */
+a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    padding-inline-start: 0px
+}
+/* Menu Principal */
 
 
 .logo{
-    height: 5em;
-    margin-left: 4rem;
-    margin-top: .5rem;
+    height: 5rem;
+    padding-left: 2rem;
 }
 
 .menuPrincipal{
+    box-sizing: border-box;
+    height: 80px;
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    
+    background-color: rgba(12, 11, 17, .5);
 }
+
 .top{
     display: grid;
-
-}
-.subMenu{
-    display: flex;
     
 }
-
-.subMenu li {
-    list-style: none;
-    margin-right: 1.5rem;
-    padding: 1.5rem 1rem;
-    font-size: 1.1rem;
-    justify-items: center ;
- }
-.subMenu li a{
-    text-decoration: none;
-    text-transform: capitalize;
-    color: white;
-    font-size: 1.2rem;
-    text-shadow: 1px 1px rgba(255,255,255,0.4);
-}
-
-
-@media only screen and (min-width:1080px){
-    .subMenu li:hover{
-        transform: scale(1.1,1.1);
-    }
-    .subMenu li a:hover{
-        color: rgba(8, 10, 41, 0.9);
-        text-shadow: 1px 1px rgba(8, 10, 41, 0.4);
-    }
-    
-}
-
 
 .fondo{
-    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../fotos/Fondo.jpg"); 
     background: linear-gradient(to bottom, rgba(33, 34, 43, 0.9) 0%, rgba(36, 36, 46, 0.9) 100%), url("../fotos/Fondo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -87,6 +63,104 @@ li{
     height: 100vh;
     
 }
+/* menu hamburguesa */
+#btn-mobile{
+    display: none;
+}
+.menuPrincipal{
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+}
+#subMenu{
+    display: flex;
+    list-style: none;
+    font-size: 1.2rem;
+}
+#subMenu a{
+    display: block;
+    padding: .5rem;
+}
+
+
+@media only screen and (min-width:1080px){
+    #subMenu li {
+        margin-right: 2rem;
+    }
+    #subMenu li:hover{
+        transform: scale(1.1,1.1);
+    }
+    #subMenu li a:hover{
+        color: rgba(8, 10, 41, 0.9);
+        text-shadow: 1px 1px rgba(8, 10, 41, 0.4);
+    }
+    
+} 
+
+@media only screen and (max-width: 800px){
+    
+    /* Menu hamburguesa */
+    #subMenu{
+        display: block;
+        position: absolute; 
+        width: 40%;
+        top: 61px;
+        left: 0px;
+        background-color:rgba(12, 11, 17, .5) ;
+        z-index: 1000; 
+        visibility: hidden;
+        overflow-x: hidden;
+        
+    }
+
+    #header-nav.active #subMenu{
+        height: calc(100vh - 80px);
+        visibility: visible;
+        overflow-x: auto;
+    }
+    #subMenu li{
+        padding-top: 1.3rem;
+        padding-left: 2rem;
+        font-size: 1.3rem;
+    }
+
+    #btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+    #hamburger{
+        display: block;
+        border-top: 2px solid;
+        width: 20px;
+    }
+    #hamburger::after, #hamburger::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: black;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+    }
+    #header-nav.active #hamburger {
+        border-top-color: transparent;
+    }
+    #header-nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+    #header-nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+        
+    }
+}
+
 
 /* About Me Section*/
 .contenedor{
@@ -99,8 +173,6 @@ li{
 .titulo{
     text-transform: uppercase;
     text-align: center;
-    /* padding-bottom: 1rem; */
-    /* border-bottom: 1px solid rgba(255,255,255,0.9); */
     text-shadow: 1px 1px rgba(255,255,255,0.3);
     font-size: 2rem;
 }
@@ -158,7 +230,6 @@ li{
 
 
 .foto{
-    /* padding-top: 1rem; */
     height: 150px;
     width: auto;
     border-radius: 1rem;
@@ -208,7 +279,6 @@ li{
     font-size: 1.3rem;
     font-weight: 400;
     text-transform: capitalize;
-    /* text-align: center; */
     text-shadow: 1px 1px rgba(255,255,255,0.4);
     border: 0.1px solid rgba(8, 10, 41, 0.2);
     

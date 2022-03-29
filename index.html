@@ -16,20 +16,23 @@
 <body>
 
     <header class="fondo top">
-        <div class="menuPrincipal" >
-            <nav>
-                <div><a href="index.html"><img src="fotos/jp_logo.png" alt="Logo" class="logo"></a></div>
-            </nav>
-            <nav >
-                <ul class="subMenu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="Sobremi.html">Sobre mi</a></li>
-                    <li><a href="resumen.html">Proyectos</a></li>
-                    <li><a href="portfolio.html">Portfolios</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+                <div class="menuPrincipal" >
+                    <nav >
+                        <div><a href="index.html"><img src="fotos/jp_logo.png" alt="Logo" class="logo"></a></div>
+                    </nav>
+                    <nav id="header-nav">
+                        <button id="btn-mobile">
+                            <span id="hamburger"></span>
+                        </button>
+                        <ul id="subMenu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="Sobremi.html">Sobre mi</a></li>
+                            <li><a href="resumen.html">Proyectos</a></li>
+                            <li><a href="portfolio.html">Portfolios</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
         <div class="caja">
             <h2 class="titulo">Juan Pablo Echeverria</h2>
             <p class="textoUno">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea distinctio omnis minus officiis blanditiis ex consequatur in eveniet quis, reprehenderit voluptatibus at hic consectetur aspernatur quod numquam similique! Adipisci, facilis!</p>
@@ -117,7 +120,7 @@
             <a href=""><img src="fotos/gmail.png" alt="" class="footer-foto"></a>
         </div>
     </footer>
-
+    <script src="js/boton.js"></script>
 </body>
 
 </html>
